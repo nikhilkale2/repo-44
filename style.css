@@ -60,3 +60,33 @@ a {
 .pname span {
   display: inline-block;
 }
+.PName {
+  margin: 90px 0 0px 450px;
+  font-size: 80px;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid black;
+  animation: typing 0.5s steps(21, end) forwards, blink 0.8s step-end infinite;
+  -webkit-animation: typing 3s steps(21, end) forwards,
+    blink 0.8s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 13ch;
+  }
+}
+@keyframes blink {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}

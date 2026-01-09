@@ -3,49 +3,119 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Typing Animation</title>
+    <title>Document</title>
     <style>
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background: #f0f0f0;
-        font-family: sans-serif;
+      * {
+        margin: 0;
+        padding: 0;
       }
-
-      .typewriter {
-        font-size: 2rem;
-        white-space: nowrap; /* prevent line break */
-        overflow: hidden; /* hide extra text */
-        border-right: 2px solid black; /* cursor effect */
-        width: 0; /* start hidden */
-        animation: typing 3s steps(15, end) forwards,
-          blink 0.8s step-end infinite;
-        /* 'forwards' keeps the width after typing is done */
+      .hero-page {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: black;
+        height: 100vh;
+        color: white;
+      }
+      .hero-info p {
+        max-width: 500px;
+        font-size: 20px;
+        line-height: 30px;
+      }
+      .animated-txt {
+        font-size: 50px;
+        margin-bottom: 20px;
+        font-weight: 500;
+        min-width: 400px;
+      }
+      .animated-txt span {
+        position: relative;
+      }
+      .animated-txt span::before {
+        content: "Nikhil kale";
+        color: #fe4043;
+        animation: words 20s infinite;
+      }
+      .animated-txt span::after {
+        content: "";
+        position: absolute;
+        width: calc(100% + 8px);
+        height: 100%;
+        background-color: black;
+        border-left: 2px solid #fe4043;
+        right: -8px;
+        animation: cursor 0.8s infinite, typing 20s steps(14) infinite;
+      }
+      @keyframes cursor {
+        to {
+          border-left: 2px solid black;
+        }
+      }
+      @keyframes words {
+        0%,
+        20% {
+          content: "Nikhil kale";
+        }
+        21%,
+        40% {
+          content: "Student";
+        }
+        41%,
+        60% {
+          content: "Frontend Developer";
+        }
+        61%,
+        80% {
+          content: "Coder";
+        }
+        81%,
+        100% {
+          content: "Discipline";
+        }
       }
 
       @keyframes typing {
-        from {
+        10%,
+        15%,
+        30%,
+        35%,
+        50%,
+        55%,
+        70%,
+        75%,
+        90%,
+        95% {
           width: 0;
         }
-        to {
-          width: 15ch;
-        } /* adjust according to number of characters */
-      }
-
-      @keyframes blink {
-        from,
-        to {
-          border-color: transparent;
-        }
-        50% {
-          border-color: black;
+        5%,
+        20%,
+        25%,
+        40%,
+        45%,
+        60%,
+        65%,
+        80%,
+        85%,
+        100% {
+          width: calc(100% + 8px);
         }
       }
     </style>
   </head>
   <body>
-    <h1 class="typewriter">Hello, Nikhil!</h1>
+    <div class="hero-page">
+      <div class="hero-img">
+        <img src="nikhil_profile2.png" alt="" />
+      </div>
+      <div class="hero-info">
+        <h1 class="animated-txt">I'am <span></span></h1>
+        <p>
+          I’m an IT student passionate about frontend development. I enjoy
+          building responsive websites and adding smooth UI animations using
+          HTML, CSS, JavaScript, and GSAP. I’m always learning by working on
+          real projects and improving my skills.
+        </p>
+      </div>
+    </div>
   </body>
 </html>
