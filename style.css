@@ -51,3 +51,12 @@ a {
 .closebtn i {
   display: none;
 }
+.pname {
+  font-size: 140px;
+  margin-top: 150px;
+  margin-left: 500px;
+  overflow: hidden;
+}
+.pname span {
+  display: inline-block;
+}

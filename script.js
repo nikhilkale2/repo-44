@@ -72,19 +72,38 @@ mm.add("(max-width:1024px)", () => {
   };
 });
 
-// mm.add("(min-width:769px) and (max-width:1024px)", () => {
-//   let el = gsap.timeline();
+let pname = document.querySelector(".pname");
 
-//   el.from(".links li", {
-//     y: -200,
-//     opacity: 0,
-//     duration: 0.9,
-//     stagger: 0.3,
-//   });
-//   el.from(".icons i", {
-//     y: -150,
-//     opacity: 0,
-//     duration: 0.4,
-//     stagger: 0.2,
-//   });
-// });
+let ptxt = pname.textContent;
+
+let splitpname = ptxt.split("");
+let namelength = splitpname.length / 2;
+
+let txtcutter = "";
+
+splitpname.forEach((obj, idx) => {
+  if (idx < namelength) {
+    txtcutter += `<span class="a">${obj}</span>`;
+  } else {
+    txtcutter += `<span class="b">${obj}</span>`;
+  }
+});
+
+pname.innerHTML = txtcutter;
+
+mm.add("(min-width:1440px)", () => {
+  gsap.from(".pname .a", {
+    y: 100,
+    opacity: 0,
+    duration: 0.5,
+    delay: 0.3,
+    stagger: 0.3,
+  });
+  gsap.from(".pname .b", {
+    y: 100,
+    opacity: 0,
+    duration: 0.5,
+    delay: 0.5,
+    stagger: 0.3,
+  });
+});
