@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typing Animation</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #f0f0f0;
+        font-family: sans-serif;
+      }
+
+      .typewriter {
+        font-size: 2rem;
+        white-space: nowrap; /* prevent line break */
+        overflow: hidden; /* hide extra text */
+        border-right: 2px solid black; /* cursor effect */
+        width: 0; /* start hidden */
+        animation: typing 3s steps(15, end) forwards,
+          blink 0.8s step-end infinite;
+        /* 'forwards' keeps the width after typing is done */
+      }
+
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 15ch;
+        } /* adjust according to number of characters */
+      }
+
+      @keyframes blink {
+        from,
+        to {
+          border-color: transparent;
+        }
+        50% {
+          border-color: black;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="typewriter">Hello, Nikhil!</h1>
+  </body>
+</html>
