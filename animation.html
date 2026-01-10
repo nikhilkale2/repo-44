@@ -3,119 +3,192 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="animation.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Document</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      .hero-page {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        background-color: black;
-        height: 100vh;
-        color: white;
-      }
-      .hero-info p {
-        max-width: 500px;
-        font-size: 20px;
-        line-height: 30px;
-      }
-      .animated-txt {
-        font-size: 50px;
-        margin-bottom: 20px;
-        font-weight: 500;
-        min-width: 400px;
-      }
-      .animated-txt span {
-        position: relative;
-      }
-      .animated-txt span::before {
-        content: "Nikhil kale";
-        color: #fe4043;
-        animation: words 20s infinite;
-      }
-      .animated-txt span::after {
-        content: "";
-        position: absolute;
-        width: calc(100% + 8px);
-        height: 100%;
-        background-color: black;
-        border-left: 2px solid #fe4043;
-        right: -8px;
-        animation: cursor 0.8s infinite, typing 20s steps(14) infinite;
-      }
-      @keyframes cursor {
-        to {
-          border-left: 2px solid black;
-        }
-      }
-      @keyframes words {
-        0%,
-        20% {
-          content: "Nikhil kale";
-        }
-        21%,
-        40% {
-          content: "Student";
-        }
-        41%,
-        60% {
-          content: "Frontend Developer";
-        }
-        61%,
-        80% {
-          content: "Coder";
-        }
-        81%,
-        100% {
-          content: "Discipline";
-        }
-      }
-
-      @keyframes typing {
-        10%,
-        15%,
-        30%,
-        35%,
-        50%,
-        55%,
-        70%,
-        75%,
-        90%,
-        95% {
-          width: 0;
-        }
-        5%,
-        20%,
-        25%,
-        40%,
-        45%,
-        60%,
-        65%,
-        80%,
-        85%,
-        100% {
-          width: calc(100% + 8px);
-        }
-      }
-    </style>
   </head>
   <body>
-    <div class="hero-page">
-      <div class="hero-img">
-        <img src="nikhil_profile2.png" alt="" />
+    <section class="section1">
+      <nav>
+        <div class="logo">
+          <h1>MySite</h1>
+        </div>
+        <div class="links">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+          <a href="#">Feature</a>
+          <a href="#">Feedback</a>
+          <div class="icons">
+            <i class="fa-regular fa-circle-user"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+        </div>
+      </nav>
+    </section>
+
+    <section class="section2">
+      <div class="hero-box">
+        <div class="hero-img">
+          <img
+            src="https://th.bing.com/th/id/OIP.Fjqs5zF29qy7ri6becQVnAHaEK?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3"
+            alt=""
+          />
+        </div>
+        <div class="hero-info">
+          <h1>VIRAT KOHLI</h1>
+          <p>
+            Kohli was born on 5 November 1988 in Delhi into a Punjabi Hindu
+            family. His mother Saroj Kohli is a homemaker while his father Prem
+            Nath Kohli worked as a criminal lawyer. He has an elder brother
+            Vikas. Kohli was born on 5 November 1988 in Delhi into a Punjabi
+            Hindu family.
+          </p>
+          <button>Explore more</button>
+        </div>
       </div>
-      <div class="hero-info">
-        <h1 class="animated-txt">I'am <span></span></h1>
-        <p>
-          I’m an IT student passionate about frontend development. I enjoy
-          building responsive websites and adding smooth UI animations using
-          HTML, CSS, JavaScript, and GSAP. I’m always learning by working on
-          real projects and improving my skills.
-        </p>
+    </section>
+
+    <section class="section3">
+      <div class="container">
+        <div class="item1 item left">
+          <div class="line1">
+            <h1>Heading</h1>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Pariatur, dolorem repudiandae! Recusandae tenetur dicta
+              asperiores.
+            </p>
+          </div>
+          <div class="image">
+            <img
+              src="https://static.independent.co.uk/2023/11/15/17/15-bcd2ce2ebf3247c6947c8d69f1f0ee17.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="item2 item right">
+          <div class="line2">
+            <h1>Heading</h1>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Pariatur, dolorem repudiandae! Recusandae tenetur dicta
+              asperiores.
+            </p>
+          </div>
+          <div class="image">
+            <img
+              src="https://static.independent.co.uk/2023/11/15/17/15-bcd2ce2ebf3247c6947c8d69f1f0ee17.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="item3 item">
+          <div class="line3">
+            <h1>Heading</h1>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Pariatur, dolorem repudiandae! Recusandae tenetur dicta
+              asperiores.
+            </p>
+          </div>
+          <div class="image">
+            <img
+              src="https://static.independent.co.uk/2023/11/15/17/15-bcd2ce2ebf3247c6947c8d69f1f0ee17.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="item4 item">
+          <div class="line4">
+            <h1>Heading</h1>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Pariatur, dolorem repudiandae! Recusandae tenetur dicta
+              asperiores.
+            </p>
+          </div>
+          <div class="image">
+            <img
+              src="https://static.independent.co.uk/2023/11/15/17/15-bcd2ce2ebf3247c6947c8d69f1f0ee17.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="item5 item">
+          <div class="line5">
+            <h1>Heading</h1>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Pariatur, dolorem repudiandae! Recusandae tenetur dicta
+              asperiores.
+            </p>
+          </div>
+          <div class="image">
+            <img
+              src="https://static.independent.co.uk/2023/11/15/17/15-bcd2ce2ebf3247c6947c8d69f1f0ee17.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="item6 item">
+          <div class="line6">
+            <h1>Heading</h1>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Pariatur, dolorem repudiandae! Recusandae tenetur dicta
+              asperiores.
+            </p>
+          </div>
+          <div class="image">
+            <img
+              src="https://static.independent.co.uk/2023/11/15/17/15-bcd2ce2ebf3247c6947c8d69f1f0ee17.jpg"
+              alt=""
+            />
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
+    <section class="ad-section">
+      <div class="ad-box">
+        <div class="ad-theory">
+          <h1>Advertisement</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+            quidem.
+          </p>
+        </div>
+        <img
+          src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_w_1200/lsci/db/PICTURES/CMS/348100/348106.jpg"
+          alt=""
+        />
+        <div class="ad-theory">
+          <h1>Advertisement</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+            quidem.
+          </p>
+        </div>
+      </div>
+    </section>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+      integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+      integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="anim.js"></script>
   </body>
 </html>

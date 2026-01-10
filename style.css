@@ -60,33 +60,84 @@ a {
 .pname span {
   display: inline-block;
 }
-.PName {
-  margin: 90px 0 0px 450px;
-  font-size: 80px;
+.animated-txt {
+  font-size: 70px;
+  margin: 50px 0 0 540px;
+  font-weight: 400;
+  min-width: 400px;
   font-family: Arial, Helvetica, sans-serif;
-  width: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 2px solid black;
-  animation: typing 0.5s steps(21, end) forwards, blink 0.8s step-end infinite;
-  -webkit-animation: typing 3s steps(21, end) forwards,
-    blink 0.8s step-end infinite;
+}
+.animated-txt span {
+  position: relative;
+}
+.animated-txt span::before {
+  content: "Frontend Developer";
+  color: #fe4043;
+  animation: words 20s infinite;
+}
+.animated-txt span::after {
+  content: "";
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  background-color: white;
+  right: -8px;
+  border-left: 2px solid #fe4043;
+  animation: cursor 0.8s infinite, typing 20s steps(14) infinite;
+  -webkit-animation: cursor 0.8s infinite, typing 20s steps(14) infinite;
+}
+@keyframes cursor {
+  to {
+    border-left: 2px solid white;
+  }
+}
+
+@keyframes words {
+  0%,
+  20% {
+    content: "Frontend Developer";
+  }
+  21%,
+  40% {
+    content: "Student";
+  }
+  41%,
+  60% {
+    content: "Coder";
+  }
+  61%,
+  80% {
+    content: "Developer";
+  }
+  81%,
+  100% {
+    content: "Gamer";
+  }
 }
 
 @keyframes typing {
-  from {
+  10%,
+  15%,
+  30%,
+  35%,
+  50%,
+  55%,
+  70%,
+  75%,
+  90%,
+  95% {
     width: 0;
   }
-  to {
-    width: 13ch;
-  }
-}
-@keyframes blink {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: black;
+  5%,
+  20%,
+  25%,
+  40%,
+  45%,
+  60%,
+  65%,
+  80%,
+  85%,
+  100% {
+    width: calc(100% + 8px);
   }
 }
